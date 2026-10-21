@@ -1,0 +1,306 @@
+:root {
+  --fondo: #0f0f1a;
+  --fondo-claro: #1a1a2e;
+  --tarjeta: #222240;
+  --morado: #7c4dff;
+  --celeste: #00d4ff;
+  --amarillo: #ffc83d;
+  --texto: #f2f2f7;
+  --texto-suave: #b0b0c8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: var(--fondo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.encabezado {
+  background-color: var(--fondo-claro);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 2px solid var(--morado);
+}
+
+.encabezado-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  font-size: 1.8rem;
+}
+
+.logo span {
+  color: var(--celeste);
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: var(--texto-suave);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.menu a:hover {
+  color: var(--celeste);
+}
+
+.contador {
+  background-color: var(--morado);
+  color: white;
+  border-radius: 12px;
+  padding: 1px 8px;
+  font-size: 0.8rem;
+}
+
+.portada {
+  background: linear-gradient(135deg, #2b1a6b, #0f0f1a 70%);
+  padding: 110px 0;
+  text-align: center;
+}
+
+.portada h2 {
+  font-size: 2.8rem;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  line-height: 1.2;
+}
+
+.portada-texto {
+  color: var(--texto-suave);
+  max-width: 550px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+}
+
+.boton {
+  display: inline-block;
+  background-color: var(--morado);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.boton:hover {
+  background-color: var(--celeste);
+  color: var(--fondo);
+}
+
+.seccion {
+  padding: 70px 0;
+}
+
+.seccion-oscura {
+  background-color: var(--fondo-claro);
+}
+
+.titulo-seccion {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.subtitulo-seccion {
+  color: var(--texto-suave);
+  margin-bottom: 35px;
+}
+
+.subtitulo-seccion strong {
+  color: var(--amarillo);
+  font-size: 1.2rem;
+}
+
+.juegos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.juego {
+  background-color: var(--tarjeta);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid transparent;
+}
+
+.juego:hover {
+  border-color: var(--morado);
+  transform: translateY(-4px);
+}
+
+.juego-imagen {
+  height: 190px;
+  overflow: hidden;
+}
+
+.juego-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.juego-info {
+  padding: 15px;
+}
+
+.juego-info h3 {
+  margin-bottom: 8px;
+}
+
+.juego-info p {
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.juego-info p span {
+  color: var(--texto);
+  font-weight: 600;
+}
+
+.boton-favorito {
+  width: 100%;
+  margin-top: 12px;
+  padding: 9px;
+  border: 2px solid var(--amarillo);
+  background-color: transparent;
+  color: var(--amarillo);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.boton-favorito:hover {
+  background-color: rgba(255, 200, 61, 0.15);
+}
+
+.boton-favorito.activo {
+  background-color: var(--amarillo);
+  color: var(--fondo);
+}
+
+.favoritos {
+  list-style: none;
+}
+
+.favorito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--tarjeta);
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border-left: 4px solid var(--amarillo);
+}
+
+.favorito-datos {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.favorito-imagen {
+  width: 90px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.favorito small {
+  color: var(--texto-suave);
+  display: block;
+}
+
+.boton-quitar {
+  background-color: transparent;
+  border: 1px solid #ff5c7a;
+  color: #ff5c7a;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.boton-quitar:hover {
+  background-color: #ff5c7a;
+  color: white;
+}
+
+.mensaje-vacio {
+  color: var(--texto-suave);
+  text-align: center;
+  padding: 20px;
+}
+
+.pie {
+  background-color: #08080f;
+  text-align: center;
+  padding: 50px 0 30px;
+  border-top: 2px solid var(--morado);
+}
+
+.titulo-pie {
+  margin-bottom: 15px;
+  color: var(--celeste);
+}
+
+.pie p {
+  color: var(--texto-suave);
+}
+
+.derechos {
+  margin-top: 20px;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 800px) {
+  .juegos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portada h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .juegos {
+    grid-template-columns: 1fr;
+  }
+
+  .encabezado-contenido {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu {
+    gap: 12px;
+    font-size: 0.9rem;
+  }
+}

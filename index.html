@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameHub</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="contenedor encabezado-contenido">
+      <h1 class="logo">Game<span>Hub</span></h1>
+      <nav class="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#favoritos">Favoritos <span id="contador-menu" class="contador">0</span></a>
+        <a href="#creditos">Créditos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="portada">
+      <div class="contenedor">
+        <h2>Tus videojuegos favoritos</h2>
+        <p class="portada-texto">Mira el catálogo y guarda los juegos que más te gustan.</p>
+        <a href="#catalogo" class="boton">Ver catálogo</a>
+      </div>
+    </section>
+
+    <section id="catalogo" class="seccion">
+      <div class="contenedor">
+        <h2 class="titulo-seccion">Catálogo</h2>
+        <p class="subtitulo-seccion">Elige tus favoritos.</p>
+        <div id="lista-juegos" class="juegos"></div>
+      </div>
+    </section>
+
+    <section id="favoritos" class="seccion seccion-oscura">
+      <div class="contenedor">
+        <h2 class="titulo-seccion">Mis favoritos</h2>
+        <p class="subtitulo-seccion">
+          Total: <strong id="contador-favoritos">0</strong>
+        </p>
+        <ul id="lista-favoritos" class="favoritos"></ul>
+        <p id="mensaje-vacio" class="mensaje-vacio">No hay favoritos todavía.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="creditos" class="pie">
+    <div class="contenedor">
+      <h2 class="titulo-pie">Créditos</h2>
+      <p>Desarrollado por <strong>Miguel Angel Leon</strong></p>
+      <p class="derechos">© 2026 GameHub</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
